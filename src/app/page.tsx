@@ -33,15 +33,15 @@ export default function Home() {
           <div className="flex absolute top-0 w-full h-full">
             {/* Colored */}
             <div
-              className={`basis-[${project.progress}%] h-full text-white flex justify-center items-center text-3xl grayscale z-10 bg-black/50 rounded-l-md`}
+              style={{ width: `${project.progress}%` }}
+              className="h-full text-white flex justify-center items-center text-3xl grayscale z-10 bg-black/50 rounded-l-md"
             >
               {project.progress} %
             </div>
             {/* Black and White */}
             <div
-              className={`basis-[${
-                100 - project.progress
-              }%] h-full grayscale z-10 bg-transparent rounded-r-md`}
+              style={{ width: `${100 - project.progress}%` }}
+              className="h-full grayscale z-10 bg-transparent rounded-r-md"
             />
           </div>
 
