@@ -16,7 +16,7 @@ export default function Home() {
 
   const projectsListContent = data?.docs.map((project) => {
     return (
-      <div>
+      <div key={project.projectID}>
         <div className="w-full h-52 lg:h-64 relative" key={project.id}>
           <div className="relative w-full h-full">
             <Image
