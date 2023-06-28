@@ -1,8 +1,10 @@
 import Image from "next/image";
+import { jujuMainWebsiteURL, newTabProps } from "@/config/constants";
+import { Container } from "@/components/molecules/container";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 mx-auto">
+    <Container>
       {/* Header */}
       <section className="mb-20 flex flex-wrap gap-4 w-full items-center justify-between">
         <div>
@@ -13,9 +15,8 @@ export default function Home() {
         </div>
         <a
           className="underline break-all"
-          href="https://www.jujuprodgames.com/"
-          rel="noopener noreferrer"
-          target="_blank"
+          href={jujuMainWebsiteURL}
+          {...newTabProps}
         >
           https://www.jujuprodgames.com/
         </a>
@@ -31,6 +32,6 @@ export default function Home() {
           </button>
         </div>
       </section>
-    </main>
+    </Container>
   );
 }
