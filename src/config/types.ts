@@ -6,5 +6,5 @@ export type ProjectData = {
     status: string;
     points: number;
     progress: number;
-    projectId: string;
+    projectID: string;
 }
